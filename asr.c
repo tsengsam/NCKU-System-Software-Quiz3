@@ -18,5 +18,5 @@ int main()
     int m, n;
     printf("Input m and n (m >> n)...");
     scanf("%d%d", &m, &n);
-    printf("%d\n", asr_i(m,n));
+    printf("%d\n", asr_i(m, n));
 }
