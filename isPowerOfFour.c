@@ -6,16 +6,16 @@
  * I implement two versions of function, one is solving by loops
  * and one is without loops
  */
+
 bool isPowerOfFour_loop(int num)
 {
     if (num <= 0) return false;
-    int r=0;
-    while (r == 0 && num > 1) {
-        r = num % 4;
-        num /= 4;
+    for (int r = 0; num > 1; num  /= 4) {
+        if (num % 4) return false;
     }
-    return r == 0;
+    return true;
 }
+
 bool isPowerOfFour(int num)
 {
     return num > 0 && (num & (num - 1))==0 &&
